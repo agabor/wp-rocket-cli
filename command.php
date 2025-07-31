@@ -298,6 +298,40 @@ class WPRocket_CLI extends WP_CLI_Command {
 	}
 
 	/**
+	 * Turn on WP Rocket cache preload
+	 *
+	 *
+	 * ## EXAMPLES
+	 *
+	 *     wp rocket preloadon
+	 *
+	 * @subcommand preloadon
+	 */
+	public function preloadon( array $args = [], array $assoc_args = [] ) {
+
+		update_rocket_option( 'manual_preload', 1);
+
+		WP_CLI::success( 'Turned on WP Rocket cache preload' );
+	}
+
+	/**
+	 * Turn off WP Rocket cache preload
+	 *
+	 *
+	 * ## EXAMPLES
+	 *
+	 *     wp rocket preloadoff
+	 *
+	 * @subcommand preloadoff
+	 */
+	public function preloadoff( array $args = [], array $assoc_args = [] ) {
+
+		update_rocket_option( 'manual_preload', 0);
+
+		WP_CLI::success( 'Turned on WP Rocket cache preload' );
+	}
+
+	/**
 	 * Run WP Rocket Bot for preload cache files
 	 *
 	 * ## OPTIONS
