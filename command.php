@@ -328,7 +328,7 @@ class WPRocket_CLI extends WP_CLI_Command {
 
 		update_rocket_option( 'manual_preload', 0);
 
-		WP_CLI::success( 'Turned on WP Rocket cache preload' );
+		WP_CLI::success( 'Turned off WP Rocket cache preload' );
 	}
 
 	/**
